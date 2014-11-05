@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  get 'pages/about_us'       => 'pages#about_us', as: 'about'
-  get 'pages/contact_us'     => 'pages#contact_us', as: 'contact'
-  get 'pages/testermcbester' => 'pages#about_us' # Demo'ing the fact that multiple
-                                           # routes can point to the same
-                                           # controller action.
-  get 'pages/services'       => 'pages#wacky_wednesday', as: 'services'
-  
   root to: 'pages#index'
+  
+  get 'p/:id' => 'pages#show', as: 'page'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
