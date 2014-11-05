@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
   
-  get 'p/:id' => 'pages#show', as: 'page'
+  get 'pages/:id/:slug' => 'pages#show', as: 'page'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
