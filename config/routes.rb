@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'about_us'       => 'pages#about_us'
-  get 'contact_us'     => 'pages#contact_us'
-  get 'testermcbester' => 'pages#about_us' # Demo'ing the fact that multiple
+  get 'pages/about_us'       => 'pages#about_us', as: 'about'
+  get 'pages/contact_us'     => 'pages#contact_us', as: 'contact'
+  get 'pages/testermcbester' => 'pages#about_us' # Demo'ing the fact that multiple
                                            # routes can point to the same
                                            # controller action.
-  get 'services'       => 'pages#wacky_wednesday'
+  get 'pages/services'       => 'pages#wacky_wednesday', as: 'services'
   
   root to: 'pages#index'
 
